@@ -26,6 +26,7 @@ public class MyHandler implements HttpHandler {
         OutputStream output = exchange.getResponseBody();
         String response = "Req # " + cntr + " at " + new Date();
         
+        // Let's see the header values...
         keys.stream().forEach(key -> {
             System.out.println(" * key: " + key + " val: " + headers.getFirst(key));
         });
